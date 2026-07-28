@@ -1,0 +1,23 @@
+{
+  "name": "saas-growth-pros",
+  "description": "Marketing skills for technical founders building SaaS and AI products.",
+  "owner": {
+    "name": "Jon Bishop",
+    "url": "https://saasgrowthpros.com"
+  },
+  "plugins": [
+    {
+      "name": "saas-marketing-skills",
+      "displayName": "SaaS Marketing Skills",
+      "source": "./",
+      "description": "16 skills that turn Claude into a SaaS growth marketer: audience and competitive research, positioning, SEO, Google and Meta ads, copywriting, landing pages, onboarding, and analytics.",
+      "author": { "name": "Jon Bishop", "url": "https://saasgrowthpros.com" },
+      "homepage": "https://saasgrowthpros.com",
+      "repository": "https://github.com/jonbishop1/saas-marketing-skills",
+      "license": "MIT",
+      "category": "marketing",
+      "keywords": ["marketing", "saas", "seo", "copywriting", "google-ads", "meta-ads", "growth", "analytics", "landing-pages", "product-launch"],
+      "tags": ["b2b-saas", "technical-founders", "go-to-market", "demand-generation", "content-marketing", "conversion-optimization", "product-launch", "keyword-research", "paid-acquisition", "customer-research"]
+    }
+  ]
+}

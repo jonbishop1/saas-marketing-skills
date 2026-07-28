@@ -1,0 +1,9 @@
+{
+  "name": "saas-marketing-skills",
+  "description": "16 skills that turn Claude into a SaaS growth marketer: audience and competitive research, positioning, SEO, Google and Meta ads, copywriting, landing pages, onboarding, and analytics.",
+  "version": "1.0.0",
+  "author": { "name": "Jon Bishop", "url": "https://saasgrowthpros.com" },
+  "homepage": "https://saasgrowthpros.com",
+  "repository": "https://github.com/jonbishop1/saas-marketing-skills",
+  "license": "MIT"
+}
