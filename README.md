@@ -38,22 +38,22 @@ Start anywhere. Claude routes to the right skill based on your question. Ask abo
 
 | Skill | What it does |
 |-------|-------------|
-| [saas-audience-research](skills/saas-audience-research) | Identify your ideal buyers, their pain points, and where they hang out online. Grounds every other skill. |
-| [saas-competitive-research](skills/saas-competitive-research) | Map competitors, analyze positioning and pricing, find gaps you can exploit. |
-| [saas-seo-research](skills/saas-seo-research) | Keyword discovery, topic clusters, SERP analysis, and competitive keyword gaps. |
-| [saas-customer-psychology](skills/saas-customer-psychology) | Jobs-to-Be-Done, buyer motivation, cognitive biases applied to SaaS conversion and retention. |
-| [saas-marketing-plan](skills/saas-marketing-plan) | Prioritized channel strategy based on your stage, budget, and capacity. Where to spend your first dollar and your first hour. |
-| [saas-content-strategy](skills/saas-content-strategy) | Editorial planning, channel selection, content-market fit, and topic prioritization. |
-| [saas-seo-audit](skills/saas-seo-audit) | Technical SEO, content gaps, link profile health, and a prioritized fix list. |
-| [saas-landing-pages](skills/saas-landing-pages) | Page structure, section ordering, hero messaging, CTA optimization, and conversion teardowns. |
-| [saas-product-launches](skills/saas-product-launches) | Launch planning, channel sequencing, pre-launch hype, and post-launch iteration. |
-| [saas-google-ads](skills/saas-google-ads) | Campaign structure, keyword strategy, bidding, conversion tracking, and scaling for SaaS paid search. |
-| [saas-meta-ads](skills/saas-meta-ads) | Creative strategy, audience building, Pixel/CAPI setup, retargeting, and demand gen for paid social. |
-| [saas-copywriting](skills/saas-copywriting) | Homepage, pricing pages, ad copy, email sequences, sales collateral, and value proposition development. |
-| [saas-content-production](skills/saas-content-production) | Blog posts, guides, comparisons, content briefs, editing, and cross-channel repurposing. |
-| [saas-onboarding](skills/saas-onboarding) | Signup flow design, activation strategy, trial optimization, and in-app onboarding flows. |
-| [saas-data-analysis](skills/saas-data-analysis) | Event tracking, funnel analysis, cohort retention, attribution, KPI definition, and tool selection. |
-| [saas-marketing-background](skills/saas-marketing-background) | Shared intake background referenced by all other skills. Stores your product, audience, and positioning so every skill starts informed. |
+| [saas-audience-research](.agents/skills/saas-audience-research) | Identify your ideal buyers, their pain points, and where they hang out online. Grounds every other skill. |
+| [saas-competitive-research](.agents/skills/saas-competitive-research) | Map competitors, analyze positioning and pricing, find gaps you can exploit. |
+| [saas-seo-research](.agents/skills/saas-seo-research) | Keyword discovery, topic clusters, SERP analysis, and competitive keyword gaps. |
+| [saas-customer-psychology](.agents/skills/saas-customer-psychology) | Jobs-to-Be-Done, buyer motivation, cognitive biases applied to SaaS conversion and retention. |
+| [saas-marketing-plan](.agents/skills/saas-marketing-plan) | Prioritized channel strategy based on your stage, budget, and capacity. Where to spend your first dollar and your first hour. |
+| [saas-content-strategy](.agents/skills/saas-content-strategy) | Editorial planning, channel selection, content-market fit, and topic prioritization. |
+| [saas-seo-audit](.agents/skills/saas-seo-audit) | Technical SEO, content gaps, link profile health, and a prioritized fix list. |
+| [saas-landing-pages](.agents/skills/saas-landing-pages) | Page structure, section ordering, hero messaging, CTA optimization, and conversion teardowns. |
+| [saas-product-launches](.agents/skills/saas-product-launches) | Launch planning, channel sequencing, pre-launch hype, and post-launch iteration. |
+| [saas-google-ads](.agents/skills/saas-google-ads) | Campaign structure, keyword strategy, bidding, conversion tracking, and scaling for SaaS paid search. |
+| [saas-meta-ads](.agents/skills/saas-meta-ads) | Creative strategy, audience building, Pixel/CAPI setup, retargeting, and demand gen for paid social. |
+| [saas-copywriting](.agents/skills/saas-copywriting) | Homepage, pricing pages, ad copy, email sequences, sales collateral, and value proposition development. |
+| [saas-content-production](.agents/skills/saas-content-production) | Blog posts, guides, comparisons, content briefs, editing, and cross-channel repurposing. |
+| [saas-onboarding](.agents/skills/saas-onboarding) | Signup flow design, activation strategy, trial optimization, and in-app onboarding flows. |
+| [saas-data-analysis](.agents/skills/saas-data-analysis) | Event tracking, funnel analysis, cohort retention, attribution, KPI definition, and tool selection. |
+| [saas-marketing-background](.agents/skills/saas-marketing-background) | Shared intake background referenced by all other skills. Stores your product, audience, and positioning so every skill starts informed. |
 
 ---
 
