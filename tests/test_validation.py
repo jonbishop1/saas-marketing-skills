@@ -46,7 +46,7 @@ class PackageRegressionTests(unittest.TestCase):
         self.assert_failure('name does not match directory')
 
     def test_metadata_numbers_need_quoting(self):
-        self.replace('version: 2.0.0', 'version: 2')
+        self.replace('version: 2.0.1', 'version: 2')
         self.assert_failure('metadata must contain string')
 
     def test_missing_bundled_reference_breaks_package(self):
@@ -71,7 +71,7 @@ class PackageRegressionTests(unittest.TestCase):
         self.assert_failure('skill missing from README')
 
     def test_stale_release_version_is_detected(self):
-        self.replace('version: 2.0.0', 'version: 1.0.0')
+        self.replace('version: 2.0.1', 'version: 1.0.0')
         self.assert_failure('skill and plugin versions differ')
 
     def test_unknown_evaluation_skill_is_detected(self):

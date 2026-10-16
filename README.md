@@ -1,5 +1,7 @@
 # Marketing skills for developer tools and data products
 
+> Behavioral repair candidate: packaging checks pass, but output-quality regressions remain. See [evaluation status](evals/README.md). Hold this branch for validation before release.
+
 26 open-source [Agent Skills](https://agentskills.io/specification) by [Jon Bishop](https://jonbishop.co): practical workflows for helping technical users discover, evaluate, adopt, and buy a product. Covers developer tools, APIs, SDKs, open-source projects, data platforms, connectors, analytics products, and related technical software.
 
 The collection keeps the repository and original `saas-*` names for compatibility. Version 2 redesigns those 16 skills for technical products and adds 10 focused workflows. This is not a general-purpose prompt pack: each skill defines its task, product-specific decisions, evidence requirements, output, and a linked playbook.
@@ -76,6 +78,10 @@ Canonical source: `.agents/skills/<skill-name>/SKILL.md`. Each folder has standa
 Clone this repository, then place the desired skill folders in the skill location documented by your host, preserving the folder names and references. This repository's format validation does not certify every host's discovery or runtime behavior.
 
 For project-local tools that discover `.agents/skills`, copying these folders into that directory is the direct layout. Avoid installing the same skills by multiple discovery paths in one host.
+
+## Codex usage
+
+Copy the desired skill folders with their references/assets into your project’s `.agents/skills/`, then invoke a skill such as `$saas-copywriting`. See the [Codex evaluation notes](evals/README.md#codex-follow-up) for tested scope and limits.
 
 ## Claude Code plugin
 

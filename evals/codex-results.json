@@ -1,0 +1,193 @@
+{
+  "host": "Codex CLI",
+  "cli_version": "0.162.0-alpha.17.2",
+  "configured_model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "cases_completed": 27,
+  "distinct_focused_skills": 14,
+  "skill_reads_verified": 27,
+  "blocking_factual_or_scope_findings": 0,
+  "review": "Manual review against original fictional task briefs",
+  "snapshots": {
+    "developer": "b0a13ea7022fdefe8f1169e046fc591d667ebcc4",
+    "data": "a219df000030448627040524e8c33c9cea90c423"
+  },
+  "conditions": [
+    "Ephemeral CLI sessions with existing ChatGPT login",
+    "Read-only sandbox, disabled web search, no configured MCP integrations",
+    "Explicit skill invocation and observable entrypoint read",
+    "Fictional fixtures; no live product execution"
+  ],
+  "limitations": [
+    "Subset of 50 focused skills",
+    "Automatic skill selection not tested",
+    "No no-skill baseline; no causal skill-benefit claim",
+    "Host/project context remained; not a clean-room test",
+    "Different loading mechanism from earlier Claude tests; no controlled model comparison",
+    "Claude regressions remain known and separate"
+  ],
+  "cases": [
+    {
+      "id": "codex-repair-01",
+      "skill": "devtool-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-02",
+      "skill": "devtool-data-analysis",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "12/40 = 30%; no unsupported sample-to-own-environment funnel."
+    },
+    {
+      "id": "codex-repair-03",
+      "skill": "devtool-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-04",
+      "skill": "devtool-quickstart",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-06",
+      "skill": "devtool-marketing-plan",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Setup diagnosis labelled as hypothesis; proposed role owners; no invented account/signup claims."
+    },
+    {
+      "id": "codex-repair-05",
+      "skill": "devtool-google-ads",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Undocumented Windows and commercial intent retained for review, rather than automatically excluded."
+    },
+    {
+      "id": "codex-repair-07",
+      "skill": "data-product-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-08",
+      "skill": "data-product-evaluation",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Synthetic-first change and recovery test plan; documented and observed states distinguished."
+    },
+    {
+      "id": "codex-repair-10",
+      "skill": "data-product-quickstart",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-09",
+      "skill": "data-product-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Data workload kept separate from developer identities/requests; no numeric data-seat count inferred."
+    },
+    {
+      "id": "codex-repair-12",
+      "skill": "devtool-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Sparse input/output description retained without no-backend, account, offline or telemetry claims."
+    },
+    {
+      "id": "codex-repair-11",
+      "skill": "data-product-community-distribution",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-13",
+      "skill": "devtool-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-14",
+      "skill": "data-product-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-16",
+      "skill": "data-product-conference-pipeline",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-15",
+      "skill": "devtool-product-launches",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-holdout-01",
+      "skill": "devtool-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-repair-17",
+      "skill": "devtool-community-distribution",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-holdout-03",
+      "skill": "data-product-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-holdout-02",
+      "skill": "devtool-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Existing paid local licenses preserved; proposed automation rights and unknown costs distinguished."
+    },
+    {
+      "id": "codex-holdout-04",
+      "skill": "data-product-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Initial synthetic equality distinguished from untested changes; unknown self-service setup preserved."
+    },
+    {
+      "id": "codex-holdout-05",
+      "skill": "devtool-data-analysis",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-holdout-06",
+      "skill": "data-product-quickstart",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Controlled update and exact multiset oracle; no invented command syntax or assumed safe reload."
+    },
+    {
+      "id": "codex-holdout-07",
+      "skill": "data-product-conference-pipeline",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Live hosted dependencies distinguished from a labelled recording fallback."
+    },
+    {
+      "id": "codex-holdout-01-repeat",
+      "skill": "devtool-copywriting",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Reviewed the actual output against the original fictional brief: no blocking unsupported claims or scope violations identified."
+    },
+    {
+      "id": "codex-holdout-08",
+      "skill": "devtool-product-launches",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Conditional launch; unexecuted demo and unassigned support owner remain unresolved."
+    },
+    {
+      "id": "codex-holdout-02-repeat",
+      "skill": "devtool-pricing",
+      "verdict": "meets targeted factual and scope checks",
+      "note": "Repeated pricing response preserved paid local licensing and separated identities from billable seats."
+    }
+  ]
+}
