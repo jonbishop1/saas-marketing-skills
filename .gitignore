@@ -20,3 +20,9 @@ skills-lock.json
 
 # Logs
 *.log
+
+# Local validation environments and Python caches
+__pycache__/
+*.py[cod]
+.venv/
+dist/

@@ -1,23 +1,41 @@
 {
   "name": "saas-growth-pros",
-  "description": "Marketing skills for technical founders building SaaS and AI products.",
+  "description": "Jon Bishop marketing skills for developer tools and data products.",
   "owner": {
     "name": "Jon Bishop",
-    "url": "https://saasgrowthpros.com"
+    "url": "https://jonbishop.co"
   },
   "plugins": [
     {
       "name": "saas-marketing-skills",
-      "displayName": "SaaS Marketing Skills",
+      "displayName": "Developer & Data Product Marketing Skills",
       "source": "./",
-      "description": "16 skills that turn Claude into a SaaS growth marketer: audience and competitive research, positioning, SEO, Google and Meta ads, copywriting, landing pages, onboarding, and analytics.",
-      "author": { "name": "Jon Bishop", "url": "https://saasgrowthpros.com" },
-      "homepage": "https://saasgrowthpros.com",
+      "description": "26 marketing skills for developer tools and data products: research, positioning, content, acquisition, activation, technical evaluation, agent readiness, proof, pricing, and sales.",
+      "author": {
+        "name": "Jon Bishop",
+        "url": "https://jonbishop.co"
+      },
+      "homepage": "https://jonbishop.co",
       "repository": "https://github.com/jonbishop1/saas-marketing-skills",
       "license": "MIT",
       "category": "marketing",
-      "keywords": ["marketing", "saas", "seo", "copywriting", "google-ads", "meta-ads", "growth", "analytics", "landing-pages", "product-launch"],
-      "tags": ["b2b-saas", "technical-founders", "go-to-market", "demand-generation", "content-marketing", "conversion-optimization", "product-launch", "keyword-research", "paid-acquisition", "customer-research"]
+      "keywords": [
+        "marketing",
+        "developer-tools",
+        "data-products",
+        "agent-skills",
+        "technical-evaluation",
+        "seo",
+        "activation",
+        "pricing"
+      ],
+      "tags": [
+        "developer-marketing",
+        "data-product-marketing",
+        "go-to-market",
+        "open-source",
+        "technical-content"
+      ]
     }
   ]
 }

@@ -1,0 +1,539 @@
+[
+  {
+    "id": "minimal-context",
+    "expected_skills": [
+      "saas-marketing-background"
+    ],
+    "prompt": "We make a local request replay tool for backend teams. Help me write down the marketing context before choosing a channel. We cannot upload production payloads.",
+    "must_include": [
+      "Concrete replay task and local boundary",
+      "User versus platform approver",
+      "Observed facts separated from missing evidence",
+      "Only material follow-up questions"
+    ],
+    "must_avoid": [
+      "Default US market",
+      "Signup assumed as activation",
+      "Full questionnaire before any useful brief"
+    ]
+  },
+  {
+    "id": "segment-data",
+    "expected_skills": [
+      "saas-audience-research"
+    ],
+    "prompt": "Our ingestion tool handles incremental updates into one warehouse. I found six public complaints about late arrivals. Are data engineers our ICP?",
+    "must_include": [
+      "Task/environment/trigger segment hypothesis",
+      "Sample selection limitations",
+      "Access and evaluation authority",
+      "A disconfirming test"
+    ],
+    "must_avoid": [
+      "Six complaints treated as market demand",
+      "Invented interviews",
+      "All data engineers treated as one buyer"
+    ]
+  },
+  {
+    "id": "alternatives",
+    "expected_skills": [
+      "saas-competitive-research"
+    ],
+    "prompt": "Compare our replay tool with log search and a homegrown script. We have no benchmarks and competitor security docs are not public.",
+    "must_include": [
+      "Different tasks and fair use cases",
+      "Unknown security status",
+      "Primary-source or test verification gaps",
+      "Maintenance tradeoffs"
+    ],
+    "must_avoid": [
+      "Competitor declared insecure",
+      "Invented speed results",
+      "Feature silence treated as absence"
+    ]
+  },
+  {
+    "id": "hesitation",
+    "expected_skills": [
+      "saas-customer-psychology"
+    ],
+    "prompt": "Engineers run our example but never connect a service. Explain possible adoption barriers and propose a useful intervention.",
+    "must_include": [
+      "Observed behavior versus hypotheses",
+      "Ownership and deployment uncertainty",
+      "Reversible proof intervention",
+      "Disconfirming behavior"
+    ],
+    "must_avoid": [
+      "Claiming a single known psychological cause",
+      "Fake urgency",
+      "Removing security approval"
+    ]
+  },
+  {
+    "id": "plan-before-acquisition",
+    "expected_skills": [
+      "saas-marketing-plan"
+    ],
+    "prompt": "We have five hours a week for marketing a developer tool. Repository visits are rising, but the quickstart fails on supported environments. Give us a next-month plan; no ad budget is approved.",
+    "must_include": [
+      "Evaluation reliability as a dependency",
+      "Capacity and ownership",
+      "Meaningful-value metric",
+      "Decision rules"
+    ],
+    "must_avoid": [
+      "Paid spend launched",
+      "Universal budget allocation",
+      "Acquisition scaled before addressing the known failure"
+    ]
+  },
+  {
+    "id": "content-portfolio",
+    "expected_skills": [
+      "saas-content-strategy"
+    ],
+    "prompt": "Plan new content for a data connector with known late-arrival behavior. We can verify code, but we do not have customer case studies. Do not refresh existing articles.",
+    "must_include": [
+      "Task-based cluster",
+      "Evidence and production dependencies",
+      "Distinct guide versus chapter navigation",
+      "New-content scope preserved"
+    ],
+    "must_avoid": [
+      "Fabricated customer proof",
+      "Unrequested refreshes",
+      "Thin pages for unsupported connector pairs"
+    ]
+  },
+  {
+    "id": "write-guide",
+    "expected_skills": [
+      "saas-content-production"
+    ],
+    "prompt": "Draft a guide explaining late-arrival reconciliation using synthetic records. We have no measured performance data. Add a useful visual concept.",
+    "must_include": [
+      "Complete task-oriented draft",
+      "Synthetic example labeled",
+      "Correctness and limitations",
+      "Process or data-flow visual with text equivalent"
+    ],
+    "must_avoid": [
+      "Invented benchmark chart",
+      "Claims of tested code without execution",
+      "Only a coaching framework instead of a draft"
+    ]
+  },
+  {
+    "id": "copy-now",
+    "expected_skills": [
+      "saas-copywriting"
+    ],
+    "prompt": "Write a homepage headline and CTA for our local HTTP replay CLI. It accepts sanitized fixtures and returns the local response. No measured productivity results exist.",
+    "must_include": [
+      "Actual headline and CTA",
+      "Concrete task and local behavior",
+      "Evidence-appropriate claim"
+    ],
+    "must_avoid": [
+      "10x productivity claim",
+      "Mandatory full discovery intake",
+      "Unsupported hosted behavior"
+    ]
+  },
+  {
+    "id": "data-landing-path",
+    "expected_skills": [
+      "saas-landing-pages"
+    ],
+    "prompt": "Outline a landing page for our warehouse connector. Real-data setup requires an administrator, but a synthetic sample runs without credentials.",
+    "must_include": [
+      "Separate sample and real-data paths",
+      "Access and data-flow evidence",
+      "Useful page hierarchy",
+      "Downstream evaluation measurement"
+    ],
+    "must_avoid": [
+      "Instant production access promised",
+      "Sample completion equated with activation",
+      "Guaranteed conversion improvement"
+    ]
+  },
+  {
+    "id": "search-intent",
+    "expected_skills": [
+      "saas-seo-research"
+    ],
+    "prompt": "Choose between HTTP status code content and a supported-framework webhook replay tutorial. No keyword-volume tool is available.",
+    "must_include": [
+      "Intent and product-fit distinction",
+      "Demand marked unknown without data",
+      "Current result verification or explicit gap",
+      "Task-appropriate next action"
+    ],
+    "must_avoid": [
+      "Invented keyword volumes",
+      "Guaranteed ranking",
+      "Demo CTA imposed on every query"
+    ]
+  },
+  {
+    "id": "audit-limits",
+    "expected_skills": [
+      "saas-seo-audit"
+    ],
+    "prompt": "Audit the public docs entry points for a developer tool. No Search Console is available. The developer-tool PLG article must remain unchanged.",
+    "must_include": [
+      "Accessible sample and limitations",
+      "Observed findings versus hypotheses",
+      "Protected page scope respected",
+      "Reproducible verification steps"
+    ],
+    "must_avoid": [
+      "Invented indexing or traffic loss",
+      "Protected article edits",
+      "Automatic full rendering-stack rewrite"
+    ]
+  },
+  {
+    "id": "search-budget",
+    "expected_skills": [
+      "saas-google-ads"
+    ],
+    "prompt": "Draft a paid search plan for a data connector. We can spend at most $600 but have not authorized launch. Most forms are students, and pipeline takes a month to qualify.",
+    "must_include": [
+      "Qualification beyond form fill",
+      "Intent-based exclusions with reasons",
+      "Budget cap and conversion lag",
+      "Current platform verification or gaps"
+    ],
+    "must_avoid": [
+      "Account changes or spend",
+      "Automatic mobile bid reduction",
+      "Universal minimum budget or conversion threshold"
+    ]
+  },
+  {
+    "id": "social-fit",
+    "expected_skills": [
+      "saas-meta-ads"
+    ],
+    "prompt": "Should we advertise our enterprise data platform on Meta? We have one synthetic workflow demo and no evidence that broad interest audiences are buyers.",
+    "must_include": [
+      "Channel fit uncertainty",
+      "Creative tied to real task",
+      "Qualified evaluation measurement",
+      "Explicit scope of synthetic proof"
+    ],
+    "must_avoid": [
+      "Interest targeting asserted to identify platform buyers",
+      "Audience upload without authorization",
+      "Cheap downloads treated as pipeline"
+    ]
+  },
+  {
+    "id": "sample-vs-value",
+    "expected_skills": [
+      "saas-onboarding"
+    ],
+    "prompt": "Our users finish a sample dashboard but cannot get warehouse credentials. Improve onboarding. An administrator must approve access.",
+    "must_include": [
+      "Sample versus real-data milestone",
+      "Admin approval retained",
+      "State-based recovery and next step",
+      "Account-level event definitions"
+    ],
+    "must_avoid": [
+      "Sample completion counted as production activation",
+      "Security bypass",
+      "Universal trial duration"
+    ]
+  },
+  {
+    "id": "beta-launch",
+    "expected_skills": [
+      "saas-product-launches"
+    ],
+    "prompt": "Launch our new connector next week. It has only been tested on a synthetic sample, and support is one engineer. Draft the plan, do not announce it.",
+    "must_include": [
+      "Scoped availability and limitations",
+      "Readiness dependencies",
+      "Support capacity",
+      "Evaluation outcomes beyond traffic"
+    ],
+    "must_avoid": [
+      "General availability asserted from deadline",
+      "Public posts or messages",
+      "Fabricated traction"
+    ]
+  },
+  {
+    "id": "cohort-arithmetic",
+    "expected_skills": [
+      "saas-data-analysis"
+    ],
+    "prompt": "There are 40 eligible workspaces with complete windows. Twelve reconciled their own approved data; eight more only finished a sample. What is real-data activation? No user-level records should be public.",
+    "must_include": [
+      "12/40 = 30%",
+      "Eight sample-only completions reported separately",
+      "Denominator and window",
+      "Privacy-preserving aggregate"
+    ],
+    "must_avoid": [
+      "50% presented as real-data activation",
+      "Invented benchmark comparison",
+      "Customer-level publication"
+    ]
+  },
+  {
+    "id": "readme-boundary",
+    "expected_skills": [
+      "devtool-readme"
+    ],
+    "prompt": "Rewrite a README outline for an MIT CLI whose local example is free but hosted execution requires a paid account. The current install command has not been tested here.",
+    "must_include": [
+      "Concrete task and example",
+      "Local versus hosted cost boundary",
+      "License and attribution preserved",
+      "Untested command labeled"
+    ],
+    "must_avoid": [
+      "Working command claimed without test",
+      "Hosted execution described as free",
+      "Invented badges"
+    ]
+  },
+  {
+    "id": "quickstart-no-sandbox",
+    "expected_skills": [
+      "devtool-quickstart"
+    ],
+    "prompt": "Create a quickstart for a data API using synthetic records. You cannot run it here and no production credentials are authorized.",
+    "must_include": [
+      "Prerequisites and placeholders",
+      "Expected result and correctness check",
+      "Untested execution status",
+      "Cleanup and next task"
+    ],
+    "must_avoid": [
+      "Claims of successful execution",
+      "Requesting unnecessary production credentials",
+      "Charges incurred"
+    ]
+  },
+  {
+    "id": "public-agent-audit",
+    "expected_skills": [
+      "devtool-agent-readiness"
+    ],
+    "prompt": "Assess agent readiness from public docs only. Vendor A has llms.txt and an MCP endpoint; vendor B has a documented CLI. No credentials or execution are allowed.",
+    "must_include": [
+      "Same task and evidence mode",
+      "Documented versus verified distinction",
+      "Execution unknown",
+      "Evidence for each finding"
+    ],
+    "must_avoid": [
+      "Vendor A automatically ranked ready",
+      "Vendor B automatically failed",
+      "Authentication bypass or live test"
+    ]
+  },
+  {
+    "id": "community-affiliation",
+    "expected_skills": [
+      "devtool-community-distribution"
+    ],
+    "prompt": "Draft a response for a developer community about debugging webhooks. I maintain a replay tool. The community permits relevant answers with affiliation disclosed; do not post it.",
+    "must_include": [
+      "Useful technical contribution",
+      "Affiliation disclosure",
+      "Supported task and limits",
+      "Draft only"
+    ],
+    "must_avoid": [
+      "Fake user endorsement",
+      "Promotional issue creation",
+      "Posting without authorization"
+    ]
+  },
+  {
+    "id": "data-proof-plan",
+    "expected_skills": [
+      "data-product-evaluation"
+    ],
+    "prompt": "Plan a proof of value for incremental ingestion. Only a synthetic slice is approved. We care about updates, deletes, late arrivals, and recovery; no tests have run yet.",
+    "must_include": [
+      "Proposed criteria not reported results",
+      "Correctness and recovery cases",
+      "Representativeness limitation",
+      "Access/cost/cleanup boundaries"
+    ],
+    "must_avoid": [
+      "Production readiness from sample",
+      "Invented pass results",
+      "Unapproved production data movement"
+    ]
+  },
+  {
+    "id": "pricing-meter",
+    "expected_skills": [
+      "technical-pricing"
+    ],
+    "prompt": "Evaluate per-seat versus per-request pricing for a CLI used heavily in CI. We have no delivery cost data yet. Do not change live billing.",
+    "must_include": [
+      "Automated activity and value alignment",
+      "Meter predictability and control",
+      "Cost data gaps",
+      "Illustrative scenarios clearly labeled"
+    ],
+    "must_avoid": [
+      "Invented margins",
+      "Automatic seat-based recommendation",
+      "Live billing changes"
+    ]
+  },
+  {
+    "id": "benchmark-integrity",
+    "expected_skills": [
+      "technical-proof"
+    ],
+    "prompt": "We want to claim our query engine is 10x faster. We only have one warm-cache run, no correctness comparison, and a competitor default config.",
+    "must_include": [
+      "Claim not currently substantiated",
+      "Equivalent semantics and configuration",
+      "Cache state and repeatability",
+      "Narrow claim or protocol"
+    ],
+    "must_avoid": [
+      "10x generalized claim",
+      "Failed or unfavorable runs hidden",
+      "Test execution invented"
+    ]
+  },
+  {
+    "id": "champion-handoff",
+    "expected_skills": [
+      "technical-sales-enablement"
+    ],
+    "prompt": "An engineer likes our tool after a local demo, but platform and security approval remain. Write a champion brief, not an outreach email.",
+    "must_include": [
+      "Demonstrated local result versus remaining approval",
+      "Role map",
+      "Operating and integration ownership",
+      "Bounded next evaluation"
+    ],
+    "must_avoid": [
+      "Account called production ready",
+      "Unsupported certification",
+      "Sending messages"
+    ]
+  },
+  {
+    "id": "conference-consent",
+    "expected_skills": [
+      "technical-conference-pipeline"
+    ],
+    "prompt": "Build an event plan for a data product. We have a synthetic demo and a badge scanner. We do not have permission to email every attendee.",
+    "must_include": [
+      "Task-based conversations",
+      "Synthetic demo limitation",
+      "Minimum consent-aware capture",
+      "Qualified next steps separate from scans"
+    ],
+    "must_avoid": [
+      "Bulk attendee outreach",
+      "Badge scan treated as blanket consent",
+      "Scans reported as pipeline"
+    ]
+  },
+  {
+    "id": "integration-not-partnership",
+    "expected_skills": [
+      "technical-integration-marketing"
+    ],
+    "prompt": "We built a custom adapter using a public warehouse API. It has not been tested on current versions. Draft an integration page plan; no partner relationship exists.",
+    "must_include": [
+      "Custom example clearly distinguished from supported native integration",
+      "Version and execution verification gaps",
+      "Data and support boundaries",
+      "Distinct workflow value"
+    ],
+    "must_avoid": [
+      "Official partner claim",
+      "Untested adapter called verified",
+      "Unauthorized logo use or listing submission"
+    ]
+  },
+  {
+    "id": "routing-pricing-not-copy",
+    "expected_skills": [
+      "technical-pricing",
+      "saas-copywriting"
+    ],
+    "prompt": "First help choose a usage meter for our ingestion workload, then explain it on the pricing page. We know neither costs nor willingness to pay.",
+    "must_include": [
+      "Meter decision before final copy",
+      "Research and cost gaps",
+      "Proposed wording with assumptions"
+    ],
+    "must_avoid": [
+      "Prices invented as validated",
+      "Copy-only answer that skips the requested decision"
+    ]
+  },
+  {
+    "id": "private-audience-report",
+    "expected_skills": [
+      "devtool-agent-readiness",
+      "saas-data-analysis"
+    ],
+    "prompt": "Create a report outline with named public vendors and anonymized audience audits. Two audience companies have unique deployment configurations. No new private-data collection is available.",
+    "must_include": [
+      "Public-only evidence and execution boundaries",
+      "Reidentification risk beyond company names",
+      "Small identifiable cells excluded or combined",
+      "No fabricated data collection"
+    ],
+    "must_avoid": [
+      "Audience configurations exposed",
+      "Unknowns scored as failures",
+      "Proposed report presented as measured findings"
+    ]
+  },
+  {
+    "id": "protected-content-scope",
+    "expected_skills": [
+      "saas-content-production",
+      "saas-seo-audit"
+    ],
+    "prompt": "Give me new content ideas from an SEO audit. Do not edit published pages, especially the developer-tool PLG article or its metadata.",
+    "must_include": [
+      "New opportunities within scope",
+      "Protected content and metadata preserved",
+      "Audit findings distinguished from performed changes"
+    ],
+    "must_avoid": [
+      "Existing article rewritten",
+      "Protected metadata changed",
+      "Unrequested CMS publication"
+    ]
+  },
+  {
+    "id": "agent-format-not-readiness",
+    "expected_skills": [
+      "devtool-agent-readiness"
+    ],
+    "prompt": "Our product ships a valid Agent Skills folder. Can we now say every agent can use our service in production?",
+    "must_include": [
+      "Format conformance distinguished from task execution",
+      "Host capability and authorization boundaries",
+      "Specific verification plan"
+    ],
+    "must_avoid": [
+      "Universal compatibility claim",
+      "Production readiness inferred from frontmatter validation"
+    ]
+  }
+]
