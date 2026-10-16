@@ -217,7 +217,8 @@ def export(destination):
             scenarios.append(dict(id=prefix+'-'+row['name'],expected_skills=[row['name']],prompt=f"For this fictional product, complete the {row['title']} task. {config['fixture']} Work with available facts and mark evidence gaps.",must_include=[row['focus'],'Concrete deliverable with evidence limits'],must_avoid=['Invented product capabilities or results','Unauthorized external actions']))
         (folder/'evals').mkdir(exist_ok=True)
         (folder/'evals/scenarios.json').write_text(json.dumps(scenarios,indent=2)+'\n')
-        (folder/'evals/README.md').write_text((ROOT/'evals/README.md').read_text())
+        (folder/'evals/README.md').write_text((ROOT/'evals/README.md').read_text().replace('$saas-copywriting',f'${prefix}-copywriting'))
+        shutil.copy2(ROOT/'evals/codex-results.json',folder/'evals/codex-results.json')
         table='\n'.join(f"| [`{r['name']}`](.agents/skills/{r['name']}/SKILL.md) | {r['title']} |" for r in rows)
         readme=f'''# {config['label']} skills
 
@@ -234,6 +235,8 @@ This collection has its own skill names, product-specific guidance, and examples
 ## Install
 
 Clone this repository and copy the desired `.agents/skills/<name>/` folders into the skill location documented by your Agent Skills-compatible host. Keep each folder's references and assets. Each skill is standalone; shared context is optional. Avoid installing duplicate copies through several discovery paths.
+
+For Codex, copy the desired skill folders with their references/assets into your project's `.agents/skills/`, then invoke `${prefix}-copywriting` or another skill by name. See the [Codex evaluation notes](evals/README.md#codex-follow-up) for tested scope and limits.
 
 For Claude Code:
 

@@ -12,7 +12,25 @@ The latest behavioral batch stopped after the existing Claude subscription reach
 
 Raw traces and detailed judgments remain private because they include host context. The candidate is held for further validation; this file does not certify it for publication or live execution.
 
-## Reproduce selected cases
+## Codex follow-up
+
+The unchanged draft instructions were tested in **27 Codex cases covering 14 focused skills**, including the four outstanding factual regressions, additional fictional variations, and two repeated fragile cases. Every case completed, every entrypoint read was confirmed in command traces, and manual review identified no blocking factual or scope errors in this sample. Configured model: `gpt-6.1-sol`, medium reasoning; Codex CLI `0.162.0-alpha.17.2` using the existing ChatGPT login.
+
+In the previously failing cases, Codex kept unknown Windows support for review, avoided invented account/signup facts, separated developer and data pricing workloads, and omitted the unsupported no-backend promise. Other cases preserved cohort eligibility, synthetic-first evaluation, affiliation placeholders, and conditional launch/demo readiness.
+
+This is targeted evidence, not certification of all 50 skills. Tests explicitly selected and read the skill, so automatic routing remains untested. Host/project context remained visible; there was no no-skill baseline. Claude used a different loading mechanism, so these runs do not establish a controlled model comparison. Known Claude failures still keep the combined release candidate in draft.
+
+The [sanitized Codex results](codex-results.json) record coverage, conditions, snapshot commits and per-case reviews. Raw prompts, outputs and host traces remain in the private workspace report. No skill instruction was changed for these Codex runs.
+
+To try a selected skill in Codex, retain its full folder under your project's `.agents/skills/` and invoke it by name. From a project containing the selected skill:
+
+```sh
+codex exec --sandbox read-only --ephemeral --skip-git-repo-check 'Use $saas-copywriting for the fictional brief supplied here.'
+```
+
+Replace the skill name and brief for the collection/task. The recorded tests additionally disabled web search and configured integrations and explicitly requested the entrypoint read. Do not treat this example command as a clean-room evaluation harness.
+
+## Reproduce selected Claude cases
 
 With an authenticated Claude Code CLI, choose explicit IDs from `scenarios.json` and a new private output directory outside this repository:
 

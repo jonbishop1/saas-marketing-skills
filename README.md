@@ -79,6 +79,10 @@ Clone this repository, then place the desired skill folders in the skill locatio
 
 For project-local tools that discover `.agents/skills`, copying these folders into that directory is the direct layout. Avoid installing the same skills by multiple discovery paths in one host.
 
+## Codex usage
+
+Copy the desired skill folders with their references/assets into your project’s `.agents/skills/`, then invoke a skill such as `$saas-copywriting`. See the [Codex evaluation notes](evals/README.md#codex-follow-up) for tested scope and limits.
+
 ## Claude Code plugin
 
 The plugin manifest explicitly scans `./.agents/skills/`; it does not depend on local `.claude/skills` symlinks.
