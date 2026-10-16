@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+Repair evidence boundaries, local-software pricing, cohort calculations, synthetic evaluations, quickstart oracles, public copy, affiliation and launch/demo readiness. Replace placeholder worked applications with completed examples for the revised workflows. Focused collections release as 1.0.1.
+
 All notable changes to this project will be documented in this file.
 
 ## [2.0.0] — 2026-10-15

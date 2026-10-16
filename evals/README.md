@@ -1,20 +1,25 @@
 # Evaluation status
 
-The suite contains 30 authored scenarios covering all 26 skills, adjacent-task routing, sparse context, evidence gaps, privacy, and execution boundaries.
+Scenario coverage and package validity are static checks, not behavioral pass rates.
 
-## Completed checks for this redesign
+## Behavioral repair candidate
 
-- Repository metadata, relative links, standalone skill boundaries, packaging, README inventory, and scenario coverage: passed for all 26 skills.
-- Skill-creator quick validator: passed for all 26 skills.
-- Official Agent Skills reference validator: passed for all 26 skills, using upstream commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379` in an isolated environment.
-- Claude Code 2.1.222 manifest validation: plugin and marketplace passed separately.
-- Validator regression suite: 11 tests passed, including standalone copies, missing references, duplicate YAML keys, stale versions, and incorrect discovery paths.
-- MIT license: unchanged from the original repository.
+The revised instructions were exercised in actual Claude Code CLI sessions using fictional products and Read/Skill tools only, with no browser, messaging, spending, or production tools. The configured model reported `claude-sonnet-5` in Claude Code 2.1.222. Global host context was still visible, so these were fresh conversations rather than clean-room evaluations. No cross-model performance claim is made.
 
-These checks establish format and packaging integrity. They do not establish that every host loads the plugin, that a model routes every request correctly, or that generated instructions succeed against live products.
+Several candidate revisions improved cohort arithmetic, synthetic-first evaluation, and conditional launch decisions. Later runs still produced unsupported copy, mixed separate pricing workloads, and sometimes changed evidence status. A model-written Skill invocation summary was observed changing the original brief before the skill loaded; the candidate now explicitly addresses that evidence boundary. These are unresolved behavior defects, not package-validation failures.
 
-## Behavioral status
+The latest behavioral batch stopped after the existing Claude subscription reached its session limit. Ten of its first twelve attempts returned model answers; two were limit errors. The remaining scenarios were not executed for that snapshot. Transport success is not a quality pass. Earlier iterations and different snapshots must not be pooled as a final-release pass rate.
 
-Scenario prompts and positive/negative criteria have been authored and manually inspected against the corresponding workflows. No fresh-host model runs have been performed. Coverage is a static check, not a behavioral pass rate.
+Raw traces and detailed judgments remain private because they include host context. The candidate is held for further validation; this file does not certify it for publication or live execution.
 
-Run the procedure in [CONTRIBUTING.md](../CONTRIBUTING.md) before making model-performance or cross-host compatibility claims. Record host and model, scenario ID, selected skill, output artifact, observed tool actions, criterion judgments, and limitations. Keep private product evidence outside this public repository.
+## Reproduce selected cases
+
+With an authenticated Claude Code CLI, choose explicit IDs from `scenarios.json` and a new private output directory outside this repository:
+
+```sh
+python scripts/run_behavior.py --help
+```
+
+Pass the chosen IDs with `--ids` and a new directory with `--output`. The runner uses the configured model/account, read-only tool access, an empty MCP configuration, fresh conversations, per-run time/cost-equivalent bounds, and stops on host failure. Keep results outside the publishable checkout. Review each output against its original prompt and criteria; inspect the actual loaded entrypoint and invocation arguments when diagnosing errors. The runner deliberately records quality as unreviewed.
+
+Installing through a different host or directly loading a skill requires its own evaluation. Authored scenarios are reusable test inputs, not promises that every supported host produces a correct answer.

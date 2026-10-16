@@ -1,5 +1,7 @@
 # Marketing skills for developer tools and data products
 
+> Behavioral repair candidate: packaging checks pass, but output-quality regressions remain. See [evaluation status](evals/README.md). Hold this branch for validation before release.
+
 26 open-source [Agent Skills](https://agentskills.io/specification) by [Jon Bishop](https://jonbishop.co): practical workflows for helping technical users discover, evaluate, adopt, and buy a product. Covers developer tools, APIs, SDKs, open-source projects, data platforms, connectors, analytics products, and related technical software.
 
 The collection keeps the repository and original `saas-*` names for compatibility. Version 2 redesigns those 16 skills for technical products and adds 10 focused workflows. This is not a general-purpose prompt pack: each skill defines its task, product-specific decisions, evidence requirements, output, and a linked playbook.

@@ -1,0 +1,3 @@
+# Completed fictional example
+
+Five marketing hours/week; 6/10 selected support notes mention a missing local-service prerequisite; visits increasing. Working hypothesis: prerequisite discovery hurts evaluation. Week-one allocation: 2h draft a clear service prerequisite and proposed success check in a new evaluation asset; 1h engineering review; 1h observe an authorized sample attempt if feasible; 1h summarize failures and decide next step. Proposed roles: marketer and technical reviewer. If setup succeeds but users do not reach useful output, investigate the next step; if observation cannot happen, ship the reviewed draft within scope and mark diagnosis unresolved. No population failure rate or traffic-capacity claim follows from these notes.

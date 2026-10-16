@@ -1,0 +1,3 @@
+# Completed fictional example
+
+Plan only; CLI syntax unavailable. Proposed fixture targets a controlled local test service returning status 200 and JSON {"id":7,"state":"ready"}. Start the service with a documented harness if available; otherwise leave its setup syntax explicitly pending. Invoke [DOCUMENTED REPLAY COMMAND] with that fixture. Assert the service received the intended request and compare the returned status/body to the oracle above. This tests forwarding and response reporting, not canned-response playback. No run is claimed; verify CLI output mapping and prerequisites before publishing commands. Stop on mismatch, inspect request/service logs; do not claim offline or account-free operation.

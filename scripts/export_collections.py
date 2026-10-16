@@ -87,8 +87,8 @@ DECISIONS = {
         'Not included in the developer-tool collection.',
         'Agree on the decision, baseline, representative authorized workload, correctness invariants, updates/deletes/late arrivals, recovery, freshness, cost cap, ownership, and cleanup before results. Keep proposed criteria and measured outcomes distinct.'),
     'technical-pricing': (
-        'Compare value alignment for individuals, teams, service accounts, and heavy CI automation. Assess whether per-seat or per-request billing discourages integration or creates surprise usage. Separate open-source license terms from managed-service pricing.',
-        'Compare meters against volume, scan/compute behavior, concurrency, refresh frequency, retention, egress, and operating cost. Explain metering semantics, retries, failed jobs, predictability, and spend controls with explicitly observed or illustrative workloads.'),
+        'Select the developer workload only when a brief also labels a separate data workload. Do not price unrelated source-row activity as CLI usage. Compare human seats, automation and team licensing; local software can be commercial without a hosted service.',
+        'Select the data workload only when a brief labels a separate developer workload. Do not import that other product\'s human/CI identities or requests into this offer. If this data product has no supplied user count, a numeric seat scenario is unavailable. Compare data volume, scan/compute, refresh, retention and egress; billed resource use and change counts are distinct.'),
     'technical-proof': (
         'Define the actual task and baseline before making productivity or speed claims. A faster local demonstration does not prove team productivity. Record versions, equivalent setup, correctness, failures, repeated runs, and reproducibility.',
         'Prove equivalent output and semantics before comparing workload speed or cost. Record dataset shape and skew, updates, cache state, concurrency, freshness, failures, resources, repeated runs, and uncertainty. Include unfavorable conditions and limitations.'),
@@ -139,13 +139,14 @@ def export(destination):
             meta, original = parse(source/'SKILL.md')
             meta.update(name=name)
             original_desc = meta['description']
-            meta['description'] = (f"{section(original, 'Deliverable')} Use for {name[len(prefix)+1:].replace('-', ' ')} for {config['product']}. "
-                                   f"{DECISIONS[source.name][index]}")[:1024]
-            meta['metadata'].update(version='1.0.0', audience=config['product'].replace(' ', '-'), source_skill=source.name)
+            meta['description'] = original_desc.replace('developer tools and data products', config['product']).replace('developer tools or data products', config['product'])
+            meta['metadata'].update(version='1.0.1', audience=config['product'].replace(' ', '-'), source_skill=source.name)
             title = name[len(prefix)+1:].replace('-', ' ').capitalize()
             focus = section(original, 'Product-specific decisions')
             developer, data = focus.removeprefix('**Developer tools:** ').split('\n\n**Data products:** ',1)
             workflow = section(original, 'Workflow')
+            if (source/'references'/f'{prefix}-example.md').exists():
+                workflow = workflow+'\n\n### Decision example (fictional; use the user\'s facts for the deliverable)\n\n'+(source/'references'/f'{prefix}-example.md').read_text().split('\n\n',1)[1]
             workflow += '\n\n## '+config['label']+' decisions\n\n'+DECISIONS[source.name][index]
             workflow += '\n\n'+(developer if prefix=='devtool' else data)
             body = f'# {title} for {config["product"]}\n\n'
@@ -162,7 +163,13 @@ def export(destination):
             playbook += '## Decision to resolve\n\n'+DECISIONS[source.name][index]+'\n\n'
             playbook += '## Task-specific method\n\n'+(developer if prefix=='devtool' else data)+'\n\n'
             playbook += '## Output worksheet\n\n| Field | Record |\n| --- | --- |\n| Requested decision and task | |\n| User, evaluator, buyer, and owner | |\n| Supported behavior and environment | |\n| Evidence, source, and limits | |\n| Proposed action or finished artifact | |\n| Meaningful result and verification | |\n| Unknowns, failure, and stop condition | |\n\n'
-            playbook += '## Worked application\n\nFor this scenario, apply the task-specific method above and deliver: '+section(original,'Deliverable')+'\n\n'
+            example = source/'references'/f'{prefix}-example.md'
+            if example.exists():
+                playbook += '## Completed example\n\n'+example.read_text().split('\n\n',1)[1]+'\n'
+            else:
+                playbook += '## Application brief\n\nDeliver: '+section(original,'Deliverable')+'\n\n'
+            for example_file in (target/'references').glob('*-example.md'):
+                example_file.unlink()
             playbook += 'Do not assume missing capabilities or report proposed tests as completed. A useful answer identifies what is known, finishes the requested artifact within that scope, and names the next bounded verification when needed.\n\n'
             playbook += '## Review criteria\n\n'+section(original,'Quality checks')+'\n\n'
             # Preserve the richer original reference as an optional methods file;
@@ -174,7 +181,7 @@ def export(destination):
         for filename in ('LICENSE','.gitignore','requirements-dev.txt'):
             shutil.copy2(ROOT/filename, folder/filename)
         (folder/'.claude-plugin').mkdir(exist_ok=True)
-        plugin=dict(name=config['repo'],version='1.0.0',description=f"{len(rows)} open-source marketing skills for {config['product']}: research, content, acquisition, technical evaluation, activation, proof, pricing, and sales.",author=dict(name='Jon Bishop',url='https://jonbishop.co'),homepage=f'https://jonbishop.co/directories/ai-marketing-skills/{"developer-tools" if prefix=="devtool" else "data-products"}/',repository='https://github.com/jonbishop1/'+config['repo'],license='MIT',skills=['./.agents/skills/'])
+        plugin=dict(name=config['repo'],version='1.0.1',description=f"{len(rows)} open-source marketing skills for {config['product']}: research, content, acquisition, technical evaluation, activation, proof, pricing, and sales.",author=dict(name='Jon Bishop',url='https://jonbishop.co'),homepage=f'https://jonbishop.co/directories/ai-marketing-skills/{"developer-tools" if prefix=="devtool" else "data-products"}/',repository='https://github.com/jonbishop1/'+config['repo'],license='MIT',skills=['./.agents/skills/'])
         (folder/'.claude-plugin/plugin.json').write_text(json.dumps(plugin,indent=2)+'\n')
         marketplace=dict(name='jon-bishop-'+prefix,description=config['label']+' skills by Jon Bishop.',owner=dict(name='Jon Bishop',url='https://jonbishop.co'),plugins=[dict(name=config['repo'],source='./',description=plugin['description'])])
         (folder/'.claude-plugin/marketplace.json').write_text(json.dumps(marketplace,indent=2)+'\n')
@@ -185,13 +192,17 @@ def export(destination):
         validator=validator.replace("manifest['name'] != 'saas-marketing-skills' or marketplace['name'] != 'saas-growth-pros'",f"manifest['name'] != '{config['repo']}' or marketplace['name'] != 'jon-bishop-{prefix}'")
         validator=validator.replace("legacy plugin and marketplace identifiers must remain compatible","collection plugin and marketplace identifiers must match")
         (folder/'scripts/validate.py').write_text(validator)
+        shutil.copy2(ROOT/'scripts/run_behavior.py',folder/'scripts/run_behavior.py')
         test=(ROOT/'tests/test_validation.py').read_text()
         test=test.replace('devtool-agent-readiness',prefix+'-agent-readiness').replace('name: another-skill','name: another-skill')
-        test=test.replace('version: 2.0.0','version: 1.0.0').replace("'version: 1.0.0', 'version: 1.0.0'","'version: 1.0.0', 'version: 0.0.1'")
+        test=test.replace('version: 2.0.1','version: 1.0.1')
         test=test.replace('../saas-copywriting/SKILL.md','../'+prefix+'-copywriting/SKILL.md')
         (folder/'tests/test_validation.py').write_text(test)
+        shutil.copy2(ROOT/'tests/test_behavior_runner.py',folder/'tests/test_behavior_runner.py')
         scenarios=[]
         for case in json.loads((ROOT/'evals/scenarios.json').read_text()):
+            if case.get('product_scope') and case['product_scope'] != prefix:
+                continue
             if config['exclude'] in case['expected_skills']:
                 continue
             if prefix == 'devtool' and re.search(r'warehouse|data connector|ingestion|data platform|data product|late.arrival|reconcil|incremental', case['prompt'], re.I):
@@ -206,9 +217,11 @@ def export(destination):
             scenarios.append(dict(id=prefix+'-'+row['name'],expected_skills=[row['name']],prompt=f"For this fictional product, complete the {row['title']} task. {config['fixture']} Work with available facts and mark evidence gaps.",must_include=[row['focus'],'Concrete deliverable with evidence limits'],must_avoid=['Invented product capabilities or results','Unauthorized external actions']))
         (folder/'evals').mkdir(exist_ok=True)
         (folder/'evals/scenarios.json').write_text(json.dumps(scenarios,indent=2)+'\n')
-        (folder/'evals/README.md').write_text('# Evaluation status\n\nScenarios are authored review cases, not completed model runs. Run the format, link, package, and regression checks below. Product examples are fictional. No cross-host behavior certification is claimed.\n')
+        (folder/'evals/README.md').write_text((ROOT/'evals/README.md').read_text())
         table='\n'.join(f"| [`{r['name']}`](.agents/skills/{r['name']}/SKILL.md) | {r['title']} |" for r in rows)
         readme=f'''# {config['label']} skills
+
+> Behavioral repair candidate: output-quality regressions remain. See [evaluation status](evals/README.md). Hold this branch for validation before release.
 
 {len(rows)} open-source [Agent Skills](https://agentskills.io/specification) by [Jon Bishop](https://jonbishop.co) for marketing {config['product']}. Each skill includes a bounded workflow, domain-specific decisions, an evidence standard, a deliverable, and a linked playbook. There are no required paid services or runtime hooks.
 
@@ -264,7 +277,7 @@ MIT — see [LICENSE](LICENSE). External documentation, logos, datasets, and cus
         (folder/'README.md').write_text(readme)
         contribution=(ROOT/'CONTRIBUTING.md').read_text().replace('Keep the original `saas-*` names unless a separately planned migration justifies breaking compatibility.','Keep the published product-specific names stable; propose any migration explicitly.')
         (folder/'CONTRIBUTING.md').write_text(contribution)
-        (folder/'CHANGELOG.md').write_text('# Changelog\n\n## 1.0.0\n\nInitial focused collection with 25 domain-specific marketing skills, linked playbooks, standalone assets where applicable, format validation, regression tests, and authored behavioral scenarios.\n')
+        (folder/'CHANGELOG.md').write_text('# Changelog\n\n## 1.0.1\n\nImprove evidence boundaries, pricing economics, analytics cohorts, synthetic evaluation and readiness decisions. Add completed task examples and targeted behavioral regressions.\n\n## 1.0.0\n\nInitial focused collection with 25 domain-specific marketing skills, linked playbooks, standalone assets where applicable, format validation, regression tests, and authored behavioral scenarios.\n')
         if (ROOT/'.github').exists():
             shutil.copytree(ROOT/'.github',folder/'.github',dirs_exist_ok=True)
         files={str(p.relative_to(folder)):hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts}

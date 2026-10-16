@@ -535,5 +535,133 @@
       "Universal compatibility claim",
       "Production readiness inferred from frontmatter validation"
     ]
+  },
+  {
+    "id": "regression-holdout-01",
+    "product_scope": "devtool",
+    "expected_skills": [
+      "saas-copywriting"
+    ],
+    "prompt": "A fictional tool called FrameDock is a local fixture runner. It accepts sanitized fixtures and prints a response. No other behavior is specified. Write a headline, two sentences, and a CTA, under 100 words. Use supplied facts only.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-02",
+    "product_scope": "devtool",
+    "expected_skills": [
+      "technical-pricing"
+    ],
+    "prompt": "A fictional paid local static-analysis CLI has individual licenses today. Five engineers use it; two build identities run it 900,000 times monthly. License treatment of automation is undecided. Compare a team license with human-seat pricing and request pricing. Propose packaging and the next research, under 260 words. No hosted product is planned. Prices and vendor support costs are unknown.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-03",
+    "product_scope": "data-product",
+    "expected_skills": [
+      "technical-pricing"
+    ],
+    "prompt": "A fictional connector copies 2 million source records; 2% change each day. Target warehouse compute is paid directly by the customer. Vendor delivery and support costs and willingness to pay are unknown. Recommend two packaging candidates and explain what can be calculated, under 240 words. No pricing or license terms were supplied.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-04",
+    "product_scope": "data-product",
+    "expected_skills": [
+      "saas-copywriting"
+    ],
+    "prompt": "A fictional tool named StreamLedger documents insert and update support. One ten-row initial synthetic copy matched on keys and values. Nobody tested subsequent changes. A workspace needs admin credentials for setup; whether a user can complete it themselves with those credentials is unknown. Write a homepage headline and two supporting sentences. Use only these facts, under 100 words.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-05",
+    "product_scope": "devtool",
+    "expected_skills": [
+      "saas-data-analysis"
+    ],
+    "prompt": "Report activation for 60 complete-window projects: 18 have own-project success; 12 other projects have sample-only success; 6 additional projects are too recent and ineligible. No event-level history is available. Explain what further journey metrics can be calculated, under 180 words.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-06",
+    "product_scope": "data-product",
+    "expected_skills": [
+      "devtool-quickstart"
+    ],
+    "prompt": "Plan a synthetic connector quickstart, no execution. The interface and retry behavior are undocumented. Use four rows with keys a,b,c,d; plan an initial load and a change to b. Give a deterministic success check and a recovery investigation. Do not invent commands or claim a full reload is safe, under 220 words.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-07",
+    "product_scope": "data-product",
+    "expected_skills": [
+      "technical-conference-pipeline"
+    ],
+    "prompt": "Prepare a 3-minute event demo plan for a fictional cloud data pipeline from a managed SQL source to a hosted warehouse. Only synthetic records are authorized. Network reliability at the booth is unknown. Include a fallback and a useful agreed next step, under 220 words.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
+  },
+  {
+    "id": "regression-holdout-08",
+    "product_scope": "devtool",
+    "expected_skills": [
+      "saas-product-launches"
+    ],
+    "prompt": "An SDK install command is documented. The demo has never been run from a clean environment. Support ownership is proposed but not assigned. Write a launch-readiness recommendation and a usable scoped announcement draft, under 220 words. Do not execute or publish.\n\nDo not browse, change files, contact anyone, or take external actions.",
+    "must_include": [
+      "Finish the requested artifact within its length and scope",
+      "Preserve supplied evidence status and separate facts from proposals"
+    ],
+    "must_avoid": [
+      "Invented product behavior, proof, current prices, or identity",
+      "Inferring unsupported ordered events or mixing separate products"
+    ]
   }
 ]
